@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Discord.Net" Version="2.3.1" />
+      <PackageReference Include="FluentValidation" Version="10.1.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.6">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.6" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+      <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
+      <PackageReference Include="Octokit" Version="0.50.0" />
+      <PackageReference Include="Quartz" Version="3.3.2" />
+      <PackageReference Include="Quartz.Extensions.DependencyInjection" Version="3.3.2" />
+      <PackageReference Include="Quartz.Extensions.Hosting" Version="3.3.2" />
+      <PackageReference Include="Sentry" Version="3.3.4" />
+      <PackageReference Include="Sentry.Serilog" Version="3.3.4" />
+      <PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
+      <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+      <PackageReference Include="Serilog.Sinks.Debug" Version="2.0.0" />
+      <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="GitHub.Discord.Bot.Config.json" />
+      <AdditionalFiles Include="GitHub.Discord.Bot.Config.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </AdditionalFiles>
+    </ItemGroup>
+
+</Project>
